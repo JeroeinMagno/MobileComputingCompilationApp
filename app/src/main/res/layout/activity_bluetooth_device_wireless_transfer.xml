@@ -1,0 +1,123 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161b33"
+    android:padding="22dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title for the Lesson -->
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessLessonTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Bluetooth Device Wireless Transfer"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Image to Represent Bluetooth Device Wireless Transfer -->
+
+        <!-- Main Lesson Text -->
+
+        <ImageView
+            android:id="@+id/bluetoothDeviceWirelessImage"
+            android:layout_width="378dp"
+            android:layout_height="263dp"
+            android:layout_below="@id/bluetoothDeviceWirelessLessonTitle"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Illustration of Bluetooth Device Wireless Transfer"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bluetooth_wireless_transfer" />
+
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessLessonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothDeviceWirelessImage"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Bluetooth device wireless transfer enables mobile devices to communicate wirelessly, allowing users to transfer data, files, or other content between devices without needing physical cables or external infrastructure like Wi-Fi or the internet. Bluetooth has been a significant contributor to mobile computing, providing an easy, low-power solution for short-range communication." />
+
+        <!-- How Bluetooth Device Wireless Transfer Works -->
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessHowItWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothDeviceWirelessLessonText"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="How Bluetooth Device Wireless Transfer Works:" />
+
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessHowItWorksDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothDeviceWirelessHowItWorks"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="1. Pairing Devices: For Bluetooth to work, both devices must be paired. This process involves making one device discoverable while the other searches for it.\n\n2. Connection Setup: Once the devices discover each other, they establish a secure connection, often requiring a PIN or confirmation for authentication.\n\n3. File Selection and Transfer: After successful pairing, users can select files from their device to send to the connected Bluetooth-enabled device.\n\n4. Receiving the File: Once the file transfer begins, the receiver device prompts the user to accept the incoming data, completing the transfer." />
+
+        <!-- Bluetooth Device Wireless Transfer Characteristics -->
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessCharacteristics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothDeviceWirelessHowItWorksDetails"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Bluetooth Wireless Transfer Characteristics:" />
+
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessCharacteristicsDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothDeviceWirelessCharacteristics"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="- Low Power Consumption: Bluetooth is designed to consume very little power, making it ideal for mobile devices, which rely on battery life.\n\n- Short-Range Communication: Typically, Bluetooth has a communication range of up to 100 meters, but this can vary based on the Bluetooth version.\n\n- Wide Compatibility: Bluetooth is widely supported across various mobile devices, such as smartphones, laptops, tablets, and accessories like speakers and headphones." />
+
+        <!-- Benefits and Limitations of Bluetooth Wireless Transfer -->
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessBenefitsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothDeviceWirelessCharacteristicsDetails"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Benefits and Limitations of Bluetooth Wireless Transfer" />
+
+        <TextView
+            android:id="@+id/bluetoothDeviceWirelessBenefitsTextDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothDeviceWirelessBenefitsText"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Benefits:\n\n1. Low Cost: Bluetooth is a cost-effective solution for wireless communication, making it affordable for consumers and manufacturers.\n\n2. Convenience: It eliminates the need for cables and other physical connectors, allowing seamless communication between devices.\n\n3. Security: Bluetooth supports encryption and secure connections to ensure privacy during data transfers.\n\nLimitations:\n\n1. Limited Range: Bluetooth’s short-range limitations (usually up to 100 meters) may not be suitable for long-distance communication.\n\n2. Speed: Bluetooth offers slower data transfer rates compared to technologies like Wi-Fi or cellular connections, making it less ideal for large file transfers.\n\n3. Interference: Bluetooth operates in the 2.4 GHz frequency range, which is also used by other devices like Wi-Fi, microwaves, and baby monitors, making it susceptible to interference." />
+
+    </RelativeLayout>
+</ScrollView>

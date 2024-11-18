@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="spotify_black">#191414</color>
+    <color name="spotify_dark_gray">#121212</color>
+    <color name="spotify_green">#83516D2C</color>
+    <color name="spotify_gray">#191414</color>
+
+    <color name="turkish_blue">#B5E2F7</color>
+
+
+    <color name="calc_button_background">#383838</color> <!-- Gray for number buttons -->
+    <color name="calc_operator_button">#F0B725</color> <!-- Operator buttons background -->
+    <color name="calc_function_button">#1D1D1D</color> <!-- Darker gray for function buttons -->
+    <color name="calc_button_text">#FFFFFF</color> <!-- Number and Operator button text -->
+    <color name="calc_function_button_text">#FFFFFF</color> <!-- Function button text -->
 </resources>

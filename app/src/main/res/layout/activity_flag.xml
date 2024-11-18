@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spotify_dark_gray"
+    android:padding="16dp">
+
+    <ListView
+        android:id="@+id/countryListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:textColor="#FFFFFF"
+        android:padding="8dp"
+        android:scrollingCache="true"
+        android:clipToPadding="false"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,98 +5,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
+    android:background="@drawable/loginbg"
     tools:context=".Login">
 
-    <!-- Background video -->
-    <VideoView
-        android:id="@+id/backgroundLoginVideo"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:keepScreenOn="true"
-        android:scaleType="centerCrop" />
+        android:layout_margin="20dp"
+        android:background="@drawable/glass_background"
+        app:cardBackgroundColor="#80FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp">
 
-    <!-- Foreground content -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="15dp"
-        android:background="@android:color/transparent">
-
-        <TextView
-            android:text="@string/login"
-            android:textSize="30dp"
-            android:textStyle="bold"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="18dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:padding="15dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/login"
+                android:textSize="50dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:layout_marginBottom="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
-                android:hint="@string/enter_email"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:layout_marginBottom="20dp" />
+                app:boxBackgroundColor="@color/spotify_gray"
+                app:boxStrokeColor="@color/turkish_blue"
+                app:placeholderTextColor="@color/turkish_blue"
+                app:hintTextColor="@color/white">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:hint="@string/enter_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/poppins_bold"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password"
-                android:hint="@string/enter_password"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:layout_marginBottom="20dp" />
+                app:boxBackgroundColor="@color/spotify_gray"
+                app:boxStrokeColor="@color/turkish_blue"
+                app:hintTextColor="@color/white"
+                app:placeholderTextColor="@color/turkish_blue">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:hint="@string/enter_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/poppins_bold"/>
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:visibility="gone"
-            android:layout_width="51dp"
-            android:layout_height="40dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/btn_login"
-            android:text="@string/login"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#629460"
-            android:layout_marginBottom="2dp"/>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:indeterminateTint="@color/spotify_green" />
 
-        <TextView
-            android:id="@+id/RegisterNow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Click to Register"
-            android:layout_marginTop="18dp"
-            android:textSize="12dp"
-            android:layout_marginBottom="30dp"
-            android:textStyle="italic" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/spotify_green"
+                app:cornerRadius="8dp"
+                android:textSize="12dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/poppins_bold"/>
 
-        <TextView
-            android:id="@+id/forgotPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:textColor="@android:color/holo_blue_light"
-            android:layout_marginTop="10dp"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            <TextView
+                android:id="@+id/RegisterNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click to Register"
+                android:textColor="@color/spotify_black"
+                android:layout_marginTop="20dp"
+                android:textSize="12sp"
+                android:layout_marginBottom="30dp"
+                android:textStyle="italic"
+                android:fontFamily="@font/poppins_bold"/>
 
-    </LinearLayout>
-
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Forgot Password?"
+                android:textColor="@color/turkish_blue"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </FrameLayout>

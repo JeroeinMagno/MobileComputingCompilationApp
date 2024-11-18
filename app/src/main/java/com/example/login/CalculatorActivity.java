@@ -1,8 +1,12 @@
 package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -27,6 +31,11 @@ public class CalculatorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        // Set the color using a resource or a color value
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.spotify_dark_gray));
 
         // Initialize display components
         display = findViewById(R.id.display);  // The main display for the current calculation

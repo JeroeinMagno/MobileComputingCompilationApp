@@ -3,10 +3,13 @@ package com.example.login;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -30,6 +33,11 @@ public class HelloWorldActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_helloworld);
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        // Set the color using a resource or a color value
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.spotify_dark_gray));
 
         clockTextView = findViewById(R.id.clockTextView);
         greetingTextView = findViewById(R.id.greetingTextView);

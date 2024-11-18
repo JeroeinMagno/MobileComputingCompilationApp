@@ -1,0 +1,123 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161b33"
+    android:padding="22dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title for the Lesson -->
+        <TextView
+            android:id="@+id/infraredLessonTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Infrared Communication"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Image to Represent Infrared Communication -->
+        <ImageView
+            android:id="@+id/infraredImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/infraredLessonTitle"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Illustration of Infrared Communication"
+            android:src="@drawable/infrared_communication"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <!-- Main Lesson Text -->
+        <TextView
+            android:id="@+id/infraredLessonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infraredImage"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Infrared communication is a wireless technology that uses infrared light waves to transmit data over short distances. It is widely used in remote controls, data transfer, and certain communication devices where low interference and secure connections are necessary." />
+
+        <!-- How Infrared Communication Works -->
+        <TextView
+            android:id="@+id/infraredHowItWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infraredLessonText"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="How Infrared Communication Works:" />
+
+        <TextView
+            android:id="@+id/infraredHowItWorksDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infraredHowItWorks"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="1. Emission of Infrared Light: Infrared communication uses infrared LEDs (Light Emitting Diodes) to emit light in the invisible spectrum. The LEDs are usually positioned at the top of devices, like remote controls, to aim towards the receiver.\n\n2. Modulation of Signals: The infrared light is modulated to carry binary data, with on/off patterns representing 1s and 0s. This modulation allows the light to encode digital information, which is then read by the receiver.\n\n3. Line of Sight: Infrared communication generally requires a clear, unobstructed line between the transmitter (sending device) and receiver (receiving device). This is because infrared light cannot penetrate walls or solid objects.\n\n4. Reception and Demodulation: The receiver, typically a photodiode sensor, detects the infrared signal and converts it back to electronic data. This process involves decoding the on/off light patterns back into a digital format for the receiving device to interpret." />
+
+        <!-- Additional Characteristics of Infrared Communication -->
+        <TextView
+            android:id="@+id/infraredCharacteristics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infraredHowItWorksDetails"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Characteristics of Infrared Communication:" />
+
+        <TextView
+            android:id="@+id/infraredCharacteristicsDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infraredCharacteristics"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="- Short Range: Typically effective up to a few meters, suitable for home or office use.\n\n- Directivity: Needs direct line of sight between transmitter and receiver, which minimizes interference.\n\n- Low Power Consumption: Infrared communication uses low energy, making it ideal for portable, battery-operated devices.\n\n- Minimal Interference: Infrared is less likely to interfere with radio signals, making it reliable for specific tasks." />
+
+        <!-- Benefits and Limitations -->
+        <TextView
+            android:id="@+id/infraredBenefitsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infraredCharacteristicsDetails"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Benefits and Limitations" />
+
+        <TextView
+            android:id="@+id/infraredBenefitsTextDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infraredBenefitsText"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Benefits:\n\n1. Low Cost: Simple, cost-effective technology.\n\n2. Secure Transmission: Short range ensures limited accessibility, making it secure.\n\n3. Reliable in Closed Spaces: Ideal for controlled environments without line-of-sight obstructions.\n\nLimitations:\n\n1. Limited Range: Works only within a few meters.\n\n2. Environmental Sensitivity: Infrared light can be affected by direct sunlight or strong artificial light.\n\n3. Directionality Requirement: Requires a clear path between sender and receiver, restricting flexibility." />
+
+    </RelativeLayout>
+</ScrollView>

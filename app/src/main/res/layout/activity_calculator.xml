@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="17dp">
+    android:padding="18dp"
+    android:background="@color/spotify_dark_gray"
+    tools:context=".MainActivity">
 
-
-    <!-- Display area -->
     <TextView
         android:id="@+id/display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
-        android:textSize="40dp"
-        android:padding="30dp"
-        android:text="0" />
+        android:textSize="50sp"
+        android:padding="35dp"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/poppins_bold" />
 
-
-    <!-- History area inside a CardView -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:elevation="4dp"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:radius="12dp">
 
-        <!-- Scrollable history -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -34,125 +35,265 @@
                 android:id="@+id/history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:gravity="start"
                 android:padding="8dp"
                 android:text="History"
-                android:textSize="18sp" /> <!-- Changed from dp to sp for text size -->
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
-
-    <!-- Grid Layout for the buttons -->
     <GridLayout
-        android:layout_width="390dp"
-        android:layout_height="323dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:columnCount="4"
-        android:padding="15dp"
-        android:rowCount="5">
+        android:padding="11dp"
+        android:rowCount="5"
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
-        <!-- Row 1 -->
         <Button
             android:id="@+id/btn_ac"
             android:text="AC"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_button_background"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:text="7"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:text="4"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="1"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:text="0"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn_back"
             android:text="⌫"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn_plusminus"
-            android:text="+/-"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btn_divide"
-            android:text="÷"
-            android:textSize="18dp" />
-
-        <!-- Row 2 -->
-        <Button
-            android:id="@+id/btn7"
-            android:text="7"
-            android:textSize="18dp" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_button_background"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn8"
             android:text="8"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btn9"
-            android:text="9"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btn_multiply"
-            android:text="×"
-            android:textSize="18dp" />
-
-        <!-- Row 3 -->
-        <Button
-            android:id="@+id/btn4"
-            android:text="4"
-            android:textSize="18dp" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn5"
             android:text="5"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btn6"
-            android:text="6"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btn_subtract"
-            android:text="−"
-            android:textSize="18dp" />
-
-        <!-- Row 4 -->
-        <Button
-            android:id="@+id/btn1"
-            android:text="1"
-            android:textSize="18dp" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn2"
             android:text="2"
-            android:textSize="18dp" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_plusminus"
+            android:text="+/-"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:text="C"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_button_background"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:text="9"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:text="6"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn3"
             android:text="3"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btn_add"
-            android:text="+"
-            android:textSize="18dp" />
-
-
-        <Button
-            android:id="@+id/btn0"
-            android:layout_columnSpan="2"
-            android:text="0"
-            android:textSize="18dp" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn_dot"
             android:text="."
-            android:textSize="18dp" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_function_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_divide"
+            android:text="÷"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_operator_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_multiply"
+            android:text="×"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_operator_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_subtract"
+            android:text="-"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_operator_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:text="+"
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_operator_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn_equals"
             android:text="="
-            android:textSize="18dp" />
+            android:textSize="20sp"
+            android:backgroundTint="@color/calc_operator_button"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
     </GridLayout>
+
 </LinearLayout>

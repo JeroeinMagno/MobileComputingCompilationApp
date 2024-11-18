@@ -4,70 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@drawable/registerbg"
     tools:context=".Registration">
 
     <TextView
         android:text="@string/registration"
-        android:textSize="32dp"
+        android:textSize="40dp"
         android:textStyle="bold"
         android:gravity="center"
+        android:fontFamily="@font/get_schwifty"
         android:layout_marginBottom="18dp"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/spotify_dark_gray"
+        app:boxStrokeColor="@color/spotify_green"
+        app:hintTextColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             android:hint="@string/enter_email"
+            android:fontFamily="@font/poppins_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:layout_marginBottom="20dp" />
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/spotify_dark_gray"
+        app:boxStrokeColor="@color/spotify_green"
+        app:hintTextColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:hint="@string/enter_password"
+            android:fontFamily="@font/poppins_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:layout_marginBottom="20dp" />
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/spotify_dark_gray"
+        app:boxStrokeColor="@color/spotify_green"
+        app:hintTextColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_bold"
             android:hint="Phone Number"
-            android:inputType="phone" /> <!-- Changed to 'phone' input type for better validation -->
+            android:inputType="phone"
+            android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:text="Select Province:"
-        android:textSize="12dp"
+        android:textSize="12sp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_marginBottom="15dp"
+        android:fontFamily="@font/poppins_bold"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <Spinner
         android:id="@+id/spinner_province"
@@ -76,13 +96,16 @@
         android:layout_marginBottom="20dp" />
 
     <TextView
-        android:layout_marginRight="150dp"
         android:id="@+id/genderTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="150dp"
         android:text="Select Gender:"
+        android:fontFamily="@font/poppins_bold"
         android:textStyle="bold"
-        android:textSize="12dp" />
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"/>
 
     <RadioGroup
         android:id="@+id/radioGroupGender"
@@ -96,33 +119,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
-            android:textSize="12dp"/>
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/spotify_green" />
 
         <RadioButton
             android:id="@+id/radioFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
-            android:textSize="12dp"/>
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/spotify_green" />
     </RadioGroup>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/spotify_dark_gray"
+        app:boxStrokeColor="@color/spotify_green"
+        app:hintTextColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Interest"
             android:hint="What is your interest?"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
             android:inputType="text"
+            android:textColor="@color/white"
             android:layout_marginBottom="20dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/spotify_dark_gray"
+        app:boxStrokeColor="@color/spotify_green"
+        app:hintTextColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BirthDate"
@@ -130,7 +166,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date"
-            android:layout_marginBottom="20dp" /> <!-- Changed inputType to 'date' -->
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,16 +177,19 @@
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/spotify_green" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_registration"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#629460"
+        android:backgroundTint="@color/spotify_green"
+        android:fontFamily="@font/poppins_bold"
         android:text="Register"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="15dp"/>
 
     <TextView
         android:id="@+id/LogInNow"
@@ -156,7 +197,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:text="Click to Login"
-        android:textSize="12dp"
-        android:textStyle="italic" />
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="13dp"
+        android:textStyle="italic"
+        android:textColor="@color/white" />
 
 </LinearLayout>

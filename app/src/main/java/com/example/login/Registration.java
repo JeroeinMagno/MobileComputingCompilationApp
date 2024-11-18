@@ -1,10 +1,13 @@
 package com.example.login;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -14,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,10 +42,21 @@ public class Registration extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseFirestore db;
 
+    MediaPlayer mediaPlayer, errorPlayer;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.startup_sound);
+        errorPlayer = MediaPlayer.create(this, R.raw.error_sound);
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        // Set the color using a resource or a color value
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.spotify_dark_gray));
 
         // Initialize FirebaseApp and FirebaseAuth
         FirebaseApp.initializeApp(this);
@@ -110,30 +125,49 @@ public class Registration extends AppCompatActivity {
             if (TextUtils.isEmpty(email)) {
                 Toast.makeText(Registration.this, "Enter email", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
+                errorPlayer.start(); // Play error sound
                 return;
             }
 
             if (TextUtils.isEmpty(password)) {
                 Toast.makeText(Registration.this, "Enter password", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
+                errorPlayer.start(); // Play error sound
                 return;
             }
 
             if (TextUtils.isEmpty(phone)) {
                 Toast.makeText(Registration.this, "Enter phone number", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
+                errorPlayer.start(); // Play error sound
                 return;
             }
 
             if (TextUtils.isEmpty(interest)) {
                 Toast.makeText(Registration.this, "Enter interest", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
+                errorPlayer.start();
                 return;
             }
 
             if (TextUtils.isEmpty(birthDate)) {
                 Toast.makeText(Registration.this, "Enter birth date", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
+                errorPlayer.start();
+                return;
+            }
+
+            if (TextUtils.isEmpty(interest)) {
+                Toast.makeText(Registration.this, "Enter interest", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+                errorPlayer.start(); // Play error sound
+                return;
+            }
+
+            if (TextUtils.isEmpty(birthDate)) {
+                Toast.makeText(Registration.this, "Enter birth date", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+                errorPlayer.start(); // Play error sound
                 return;
             }
 
@@ -151,6 +185,7 @@ public class Registration extends AppCompatActivity {
                             // Log the error message for FirebaseAuth failure
                             Log.e("Registration", "Registration failed: " + Objects.requireNonNull(task.getException()).getMessage());
                             Toast.makeText(Registration.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            errorPlayer.start();
                         }
                     });
         });
@@ -161,6 +196,7 @@ public class Registration extends AppCompatActivity {
         if (email == null || phone == null || gender == null || province == null || interest == null || birthDate == null) {
             Toast.makeText(Registration.this, "All fields must be filled out", Toast.LENGTH_SHORT).show();
             progressBar.setVisibility(View.GONE);
+            errorPlayer.start();
             return;
         }
 
@@ -172,6 +208,7 @@ public class Registration extends AppCompatActivity {
                 .addOnSuccessListener(aVoid -> {
                     // Data successfully saved, proceed to redirect to Login
                     Toast.makeText(Registration.this, "User data saved.", Toast.LENGTH_SHORT).show();
+                    mediaPlayer.start();
 
                     // Clear form fields after successful registration
                     clearFormFields();
@@ -186,8 +223,10 @@ public class Registration extends AppCompatActivity {
                     Log.e("Registration", "Failed to save user data: " + e.getMessage());
                     Toast.makeText(Registration.this, "Failed to save user data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
+                    errorPlayer.start();
                 });
     }
+
 
 
 
@@ -224,4 +263,16 @@ public class Registration extends AppCompatActivity {
         public String getInterest() { return interest; }
         public String getBirthDate() { return birthDate; }
     }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        // Release MediaPlayer resources
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        if (errorPlayer != null) {
+            errorPlayer.release();
+        }
+    }
 }
+

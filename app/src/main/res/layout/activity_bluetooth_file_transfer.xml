@@ -1,0 +1,136 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161b33"
+    android:padding="22dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title for the Lesson -->
+        <TextView
+            android:id="@+id/bluetoothFileTransferLessonTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Bluetooth File Transfer"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Bluetooth Image Below the First Image -->
+        <ImageView
+            android:id="@+id/bluetoothIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/bluetoothFileTransferLessonTitle"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="Bluetooth Icon"
+            android:src="@drawable/bluetooth_icon"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <Button
+            android:id="@+id/selectFileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothIcon"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:text="Select File to Share"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/spotify_dark_gray" />
+
+
+        <!-- Main Lesson Text -->
+        <TextView
+            android:id="@+id/bluetoothFileTransferLessonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectFileButton"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Bluetooth file transfer is a wireless method of exchanging files between devices using Bluetooth technology. It is commonly used for transferring data between smartphones, tablets, laptops, and other devices that support Bluetooth connectivity. The process is simple, fast, and convenient, especially for short-range transfers, making it one of the most popular options for wireless communication between devices." />
+
+        <!-- How Bluetooth File Transfer Works -->
+        <TextView
+            android:id="@+id/bluetoothHowItWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothFileTransferLessonText"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="How Bluetooth File Transfer Works:" />
+
+        <TextView
+            android:id="@+id/bluetoothHowItWorksDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothHowItWorks"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="1. Pairing Devices: The first step in Bluetooth file transfer is pairing the two devices. Both devices must have Bluetooth enabled and be set to 'discoverable' mode. Once paired, they can communicate with each other.\n\n2. Selecting the File: The user selects the file they want to send from the sending device. This could be an image, document, or audio file.\n\n3. Sending the File: Once the file is selected, the user initiates the transfer by choosing the paired device. The file is then sent through the Bluetooth connection, typically using the Bluetooth Object Push Profile (OPP) or File Transfer Profile (FTP).\n\n4. Receiving the File: On the receiving device, the user will either accept or decline the file transfer. Once accepted, the file is stored in the designated folder on the receiving device." />
+
+        <!-- Characteristics of Bluetooth File Transfer -->
+        <TextView
+            android:id="@+id/bluetoothCharacteristics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothHowItWorksDetails"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Characteristics of Bluetooth File Transfer:" />
+
+        <TextView
+            android:id="@+id/bluetoothCharacteristicsDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothCharacteristics"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="- Short Range: Typically, Bluetooth file transfers work within a range of 10 meters.\n\n- Wireless: No physical connection is required between the devices, providing flexibility in use.\n\n- Simple Pairing: The process of pairing devices for Bluetooth file transfer is straightforward and typically only needs to be done once.\n\n- Low Power Consumption: Bluetooth technology consumes less power than other wireless communication methods, making it ideal for battery-powered devices." />
+
+        <!-- Benefits and Limitations of Bluetooth File Transfer -->
+        <TextView
+            android:id="@+id/bluetoothBenefitsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothCharacteristicsDetails"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Benefits and Limitations" />
+
+        <TextView
+            android:id="@+id/bluetoothBenefitsTextDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetoothBenefitsText"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Benefits:\n\n1. Easy to Use: Bluetooth file transfer requires minimal user intervention.\n\n2. No Need for Network: Unlike Wi-Fi-based transfers, Bluetooth does not require a network connection.\n\n3. Cross-Device Compatibility: Bluetooth is available on most devices, including smartphones, laptops, and tablets.\n\nLimitations:\n\n1. Slow Transfer Speed: Bluetooth transfer speeds are slower compared to Wi-Fi-based transfers.\n\n2. Range Limitation: Bluetooth file transfer typically works within a range of up to 10 meters, which can be limiting for some use cases.\n\n3. Battery Consumption: While Bluetooth consumes less power than other wireless technologies, prolonged use can drain the battery on both devices." />
+
+    </RelativeLayout>
+</ScrollView>

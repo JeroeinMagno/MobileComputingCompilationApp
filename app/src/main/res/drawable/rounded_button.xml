@@ -1,0 +1,11 @@
+<!-- res/drawable/rounded_button.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/spotify_green" /> <!-- Set this color as needed -->
+    <corners android:radius="16dp" /> <!-- Adjust radius for roundness -->
+    <padding
+        android:left="10dp"
+        android:right="10dp"
+        android:top="5dp"
+        android:bottom="5dp" />
+    <elevation android:elevation="5dp" />
+</shape>
